@@ -1,0 +1,20 @@
+3d Physics theory
+
+Rigidbodies 
+enable your GameObjects
+to act under the control of physics. The Rigidbody can receive forces and torque to make your objects move in a realistic way. Any GameObject must contain a Rigidbody to be influenced by gravity, act under added forces via scripting, or interact with other objects through the NVIDIA PhysX physics engine.
+
+Collider
+these components define the shape of an object for the purposes of physical collisions. A collider, which is invisible, need not be the exact same shape as the object’s mesh and in fact, a rough approximation is often more efficient and indistinguishable in gameplay.
+>box, sphere, capsule and mesh
+>box 2d, circle 2d, polygon
+
+add multiple to an obj to create compound colliders
+mesh more processor intensive than compound/simple
+
+Convex mesh
+>a mesh collider will normally be unable to collide with another mesh collider (ie, nothing will happen when they make contact).
+>make convex. This will generate the collider shape as a “convex hull” which is like the original mesh but with any undercuts filled in.
+
+incomplete
+read more at https://docs.unity3d.com/Manual/CollidersOverview.html

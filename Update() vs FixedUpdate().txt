@@ -1,0 +1,17 @@
+Update()
+>called every frame
+>used for regular updates such as:
+	moving non physics obj
+	simple timers
+	receiving ip
+>update interval times vary
+>is called before a new frame is rendered
+
+FixedUpdate()
+>called before every physics step
+>intervals are consistent (fixed)
+>Used for regular updates such as:
+	adjusting physics (rigidbody) objects
+
+eg showed update() times were sometimes 0.17 sometimes 0.3 0.2 etc
+fixedupdate() times were always 0.2

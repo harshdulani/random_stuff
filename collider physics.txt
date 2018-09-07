@@ -1,0 +1,32 @@
+unity
+
+collider physics
+
+messages
+
+OnCollisionEnter	called when this collider/rigidbody has begun touching another rigidbody/collider.
+OnCollisionExit		called when this collider/rigidbody has stopped touching another rigidbody/collider.
+OnCollisionStay		called once per frame for every collider/rigidbody that is touching rigidbody/collider.
+OnTriggerEnter		called when the Collider other enters the trigger.
+OnTriggerExit		called when the Collider other has stopped touching the trigger.
+OnTriggerStay		called almost all the frames for every Collider other that is touching the trigger. The function is on the physics timer so it won't necessarily run every frame.
+
+public methods
+
+GetInstanceID	Returns the instance id of the object.
+ToString		Returns the name of the GameObject.
+GetComponent(Type type);	
+Returns the component of Type type if the game object has one attached, null if it doesn't.
+eg:
+HingeJoint hinge = GetComponent("HingeJoint") as HingeJoint;	//hingejoint is a class/component attached to this object
+Or
+HingeJoint hinge = GetComponent<HingeJoint>();
+
+properties
+
+name				The name of the object.
+gameObject			The game object this component is attached to. A component is always attached to a game object.
+enabled				Enabled Colliders will collide with other Colliders, disabled Colliders won't.
+attachedRigidbody	The rigidbody the collider is attached to.
+for eg:
+GetComponent<Collider>().attachedRigidbody.AddForce(0, 1, 0);

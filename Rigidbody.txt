@@ -1,0 +1,24 @@
+Rigidbody
+
+Adding a Rigidbody component to an object will put its motion under the control of Unity's physics engine. Even without adding any code, a Rigidbody object will be pulled downward by gravity 
+
+syntax:
+declare new inside class
+Rigidbody rb;							//declares 3d rigidbody
+
+define inside Start()					
+rb = GetComponent<Rigidbody>();			//gets the rigidbody component attached to this script
+use inside FixedUpdate()
+
+useful properties & methods to look up:
+
+methods:
+	Destroy();
+	AddForce()
+	AddExplosionForce()
+
+properties:
+	velocity
+	useGravity
+	rotation
+	position

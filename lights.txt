@@ -1,0 +1,13 @@
+lights
+>use multiple not just one sun
+
+>heavily effect performance
+
+2 types
+>vertex - high performance
+>per pixel - high qual
+
+use per pixel ("important" type/rendering mode lighting) only for stuff you want to not have baked and good qual
+use it sparingly because big impact on perf
+
+use vertex ("not important") for everything else
