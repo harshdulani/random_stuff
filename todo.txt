@@ -1,0 +1,8 @@
+research and explore classes:
+
+Random 
+Mathf
+quaternion
+Wait... functions like waituntil waitforseconds etc
+interpolation and its types linear etc
+coroutine

@@ -15,3 +15,32 @@ FixedUpdate()
 
 eg showed update() times were sometimes 0.17 sometimes 0.3 0.2 etc
 fixedupdate() times were always 0.2
+
+
+Framerate Dependence
+
+You have to measure the time that elapsed between two frames, and multiply that with every movement calculation that you do.
+
+Computer A runs the game at 22FPS. Computer B runs it at 35FPS.
+
+Therefor, the average time between frames on computer A is about 45ms, and the average time between frames on Computer B is about 28ms.
+
+Now let's say you move players on both of the computers in one direction every frame, depending on the time elapsed between the frames:
+
+On Computer A:
+
+//let t bet the time between frames
+player.move(t)
+
+The same on Computer B:
+
+//let t bet the time between frames
+player.move(t)
+
+On Computer A, the function will (on average) get called 22 times, and t will have a value of 45.
+
+On Computer B, the function will be called 35 times, and t will have an average value of 28.
+
+Therefor, after one second, the player on computer A will have moved 22*45 = 990 units. On computer B, the player will have moved 35*28= 980 units.
+
+The difference in here is there because I rounded the numbers of milliseconds between frames on both computers. Usually, it will be exactly the same.

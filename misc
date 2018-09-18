@@ -1,0 +1,35 @@
+misc 
+
+when you have something in mind so as to do something to an GameObject, try and look up as much as a objects that you mau interact with. search the documentation with " Ctrl + ' " on properties methods and classes alike. might be of some help.
+
+The parent GameObjects will have transforms relative to Global axes. so theyre said to be at "global origin" etc
+similarly child GameObjects will have transforms relative to these parent ones. so theyre said to be at "local origin" etc
+
+Angular Velocity is how fast a Rigidbody is rotating.
+
+Random.InsideUnitSphere returns a random Vector3 value (a set of random X, Y and Z float values).
+
+Destroy() doesnt destroy the object in the parenthesis immediately, but MARKS all object for destruction and waits until the end of the frame to destroy all the objects.
+
+SHADERS
+
+mobile shaders are more budget effecient, can be however used in non mobile games if you want; check in game view.
+	in some cases may sacrifice quality or control
+
+additive - blacks (0, 0, 0) will not add anything from material to game, white will add a white color
+			all colors will be added, white wont be
+
+
+
+>all GameObjects created as childs of another will spawn at a relative Position to that of its parent
+
+INPUT
+
+>getButtonDown() - called when button is pressed down and only when it is. use for manual shooting
+>getButton() - called continuously for how many ever times a button is pressed. use for auto shooting
+	
+	public static bool GetButton(string buttonName); 
+		if (Input.GetButton("Fire1"))
+			{xyz;}
+
+>Height of viewport will always be twice of orthographic camera's size (if ortho size is 10, height of viewport will be 20)

@@ -18,3 +18,7 @@ Convex mesh
 
 incomplete
 read more at https://docs.unity3d.com/Manual/CollidersOverview.html
+
+quaternion
+
+quaternion.identity 				corresponds to no rotation quaternion

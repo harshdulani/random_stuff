@@ -1,0 +1,37 @@
+instantiate
+
+Instantiate(PrefabToClone, PositionObject, RotationToUse);
+
+eg:
+public class UsingInstantiate : MonoBehaviour
+{
+    public Rigidbody rocketPrefab;
+    //drag the prefab you wanna use onto this variable
+    public Transform barrelEnd;			
+    //create empty GameObject "RocketPlace" and place it at desired location. drag that GmeObject onto script variable to use it in barrelEnd var.
+    
+    
+    void Update ()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Rigidbody rocketInstance;
+            rocketInstance = Instantiate(rocketPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
+            //Instantiate returns an object data type, convert into a Rigidbody using "as"
+            rocketInstance.AddForce(barrelEnd.forward * 5000);
+            //some force to fire rocket
+        }
+    }
+}
+
+should destroy as hogs memory if not. eg:
+public class RocketDestruction : MonoBehaviour
+{
+    void Start()
+    {
+        Destroy (gameObject, 1.5f);
+        //destroy 1.5 secs after
+    }
+}
+
+add both these files to prefab to have a ready for execution and deletion prefab
