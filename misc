@@ -33,3 +33,10 @@ INPUT
 			{xyz;}
 
 >Height of viewport will always be twice of orthographic camera's size (if ortho size is 10, height of viewport will be 20)
+
+>viewport space is a 0-1 value in width and height unlike screen space which is pixel values for eg 800x600
+
+>to restart, load the same scene again. to do that, use:
+using UnityEngine.SceneManagement;
+
+SceneManager.LoadLevel(string scenename);

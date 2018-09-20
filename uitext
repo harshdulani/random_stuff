@@ -1,0 +1,17 @@
+UI > Text
+
+how i made the ui text be visible in game mode
+
+Canvas object
+	canvas
+		Render Mode - screen space - camera
+		render camera - main camera
+		plane distance - 5
+
+	canvas scaler
+		ui scale mode - constant pixel size
+		scale factor - 1
+		ref - 100
+
+Text object
+	anchors	- shift + alt - top left
