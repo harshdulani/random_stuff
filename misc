@@ -40,3 +40,11 @@ INPUT
 using UnityEngine.SceneManagement;
 
 SceneManager.LoadLevel(string scenename);
+
+>keep models, artwork etc away from working of game. create parent and child relationships
+
+>use InvokeRepeating for repeating a function() for eg: firing a turret/ npc enemy
+
+public void InvokeRepeating(string methodName, float time, float repeatRate);
+
+Invokes the method methodName in time seconds, then repeatedly every repeatRate seconds
